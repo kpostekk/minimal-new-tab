@@ -13,9 +13,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18
-      - run: yarn
+          cache: 'yarn'
+      - run: yarn --frozen-lockfile
       - run: yarn build
       - uses: actions/upload-artifact@v2
         with:
-          name: extension
+          name: minimal-new-tab
           path: dist

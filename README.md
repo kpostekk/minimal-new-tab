@@ -1,3 +1,5 @@
+Prebuilded extensions are available in actions tab.
+
 # How to build
 
 1. Get nodejs
