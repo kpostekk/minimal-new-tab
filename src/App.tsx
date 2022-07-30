@@ -5,9 +5,13 @@ import "./App.css"
 import { niceText } from "./assets/niceText.json"
 import { userLinks } from "./assets/links.json"
 import ky from "ky"
+import { useEffectOnce } from 'usehooks-ts'
 
 function RandomNiceText() {
-  const text = niceText[Math.floor(Math.random() * niceText.length)]
+  const [text, setText] = useState('')
+  useEffectOnce(() => {
+    setText(niceText[Math.floor(Math.random() * niceText.length)])
+  })
 
   return <h2 className={"text-center"}>{text}</h2>
 }
