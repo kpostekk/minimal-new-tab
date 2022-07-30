@@ -1,0 +1,24 @@
+{
+  "userLinks": [
+    {
+      "name": "github",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "youtube",
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "name": "netflix",
+      "url": "https://www.netflix.com/"
+    },
+    {
+      "name": "discord",
+      "url": "https://discord.com/"
+    }, 
+    {
+      "name": "shitshow",
+      "url": "https://gakko.pja.edu.pl/"
+    }
+  ]
+}
