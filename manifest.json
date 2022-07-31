@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "description": "Simple an minimal extension for even simpler new tab page",
+  "manifest_version": 3,
+  "version": "0.2.0",
+  "name": "mini new tab",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "index.*.js",
+        "index.*.js"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "permissions": [
+    "bookmarks"
+  ],
+  "icons": {
+    "256": "icon.png"
+  }
+}
