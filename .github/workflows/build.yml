@@ -16,7 +16,16 @@ jobs:
           cache: 'yarn'
       - run: yarn --frozen-lockfile
       - run: yarn build
+      - name: Pack extension to ZIP
+        run: |
+          zip -r minimal-new-tab-${{github.ref_name}}.zip dist
       - uses: actions/upload-artifact@v2
         with:
-          name: minimal-new-tab
-          path: dist
+          name: minimal-new-tab-${{github.ref_name}}.zip
+          path: minimal-new-tab-${{github.ref_name}}.zip
+      - name: Create Release
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: minimal-new-tab-${{github.ref_name}}.zip
+          tag: "${{github.ref_name}}"
