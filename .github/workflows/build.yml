@@ -6,7 +6,7 @@ on:
       - v*
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,10 +29,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: minimal-new-tab-${{github.ref_name}}.zip
           tag: "${{github.ref_name}}"
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
