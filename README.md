@@ -1,3 +1,7 @@
+<div align="center">
+ <img height="300" src="https://user-images.githubusercontent.com/30326322/182018328-bd4d4010-f2fa-4d48-896c-940b024e6e45.png">
+</div>
+
 # How to install
 
 1. Download latest release from *releases* page
